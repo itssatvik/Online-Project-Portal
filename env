@@ -1,0 +1,4 @@
+MONGO_URI = mongodb+srv://salik:1234@cluster0.cctv5.mongodb.net/Major?retryWrites=true&w=majority
+JWT_SECRET = 'HelloKitty'
+JWT_REFRESH_TOKEN = 'Kitty'
+JWT_LIFETIME = '1d'

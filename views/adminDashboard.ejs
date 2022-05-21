@@ -1,0 +1,51 @@
+<h3> Hello, <%= user.UserName %></h3>
+<% for(var i=0; i < projects.length; i++) { %>
+
+    <div class="col">
+        <div class="card homepage">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= projects[i]['ProjectName'] %></h5>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <%= projects[i]['Students'] %>
+                </h6>
+                <p class="card-text">
+                    <%= projects[i]['CollegeName'] %>
+                </p>
+                <p class="card-text">
+                    <%= projects[i]['ProjectLink'] %>
+                </p>
+                <p class="card-text">
+                    <%= projects[i]['Summary'] %>
+                </p>
+                <p class="card-text">
+                    <%= projects[i]['Status'] %>
+                </p>
+                
+    
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <form action="/update" method="POST" id="update-form">
+                        <input type="hidden" name="projectid" value="<%= projects[i]['_id'] %>">
+                        <input type="hidden" name="username" value="<%= user.UserName %>">
+                        <input type="hidden" name="updatename" value="approve">
+                        <button type="submit" class="btn btn-outline-success">Approve</button>
+                    
+                    </form>
+
+                    <form action="/update" method="POST" id="update-form">
+                        <input type="hidden" name="projectid" value="<%= projects[i]['_id'] %>">
+                        <input type="hidden" name="username" value="<%= user.UserName %>">
+                        <input type="hidden" name="updatename" value="decline">
+                        <button type="submit" class="btn btn-outline-danger">Decline</button>
+                    
+                    </form>
+                </div>
+                
+    
+                <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+    </div>
+<% } %>
+

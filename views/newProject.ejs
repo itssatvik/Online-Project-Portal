@@ -1,0 +1,85 @@
+<!-- Add JOB FORM -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 update">
+            <!-- <div class="card update"style="height: 10rem;"> -->
+                <div class="container update">
+                    <p ></p>
+                    <% if (isUpdated) { %>
+                    <p>Success! Edit Complete</p>
+                    
+                    <% } else { %>
+                     <p></p>
+                    <% } %>
+                    <br/>
+                    <h4 class="text-center">Project Details</h4>
+                    
+                    <form class="row gx-7 gy-2 align-items-center" action="/createproject %>" method="POST">
+                        
+                        <div class="col g-3">
+                    
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label " for="updateCompany">Project Name</label>
+                                <input type="text" class="form-control" id="updateCompany" name="ProjectName"  >
+                            </div>
+                            
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label" for="updateRole">CollegeName</label>
+                                <div class="input-group">
+                                
+                                    <input type="text" class="form-control" id="updateRole" name="CollegeName">
+                                </div>
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label " >Team Member 1</label>
+                                <input type="text" class="form-control" id="teammember"  name="Students">
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label " >Team Member 2</label>
+                                <input type="text" class="form-control" id="teammember" name="Students">
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label " >Team Member 3</label>
+                                <input type="text" class="form-control" id="teammember" name="Students">
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label " >Team Member 4</label>
+                                <input type="text" class="form-control" id="teammember" name="Students">
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label " >Team Member 5</label>
+                                <input type="text" class="form-control" id="teammember" name="Students">
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label ">Project Link</label>
+                                <input type="text" class="form-control" id="teammember" name="ProjectLink">
+                            </div>
+                            <div class="row-sm-4 text-center">
+                                <label class="class-label ">Summary</label>
+                                <input type="text" class="form-control" id="teammember" name="Summary">
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-auto">
+                            <input type="hidden" name="username" value="<%= username %>">
+                            <button type="submit" class="btn btn-success">Create Project</button>
+                            <!-- <button type="submit" class="btn btn-outline-secondary">BACK TO HOME</button> -->
+                        </div>
+                        
+                    </form>
+                    <form action='/homepage' method="GET">
+                        <div class="d-grid gap-2 d-md-auto">
+                            <button type="submit" style="margin-top:7px;" class="btn btn-secondary">BACK TO HOME</button>
+                        </div>
+                    </form>
+                    
+                    
+                    
+                </div>
+            
+
+        </div>
+    </div>
+
+</div>
